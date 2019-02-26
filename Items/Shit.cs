@@ -39,6 +39,12 @@ namespace ShittyDestruction.Items
 			recipe.AddTile(TileID.Hellforge);
 			recipe.SetResult(ItemID.PlatinumCoin, 5);
 			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.GoldOre);
+			recipe.AddTile(TileID.Hellforge);
+			recipe.SetResult(ItemID.GoldCoin, 500);
+			recipe.AddRecipe();
 		}
 	}
 }
