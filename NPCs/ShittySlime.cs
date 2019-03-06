@@ -27,12 +27,28 @@ namespace ShittyDestruction.NPCs
 			npc.aiStyle = 1;
 			aiType = NPCID.BlueSlime;
 			animationType = NPCID.BlueSlime;
+			npc.knockBackResist = 0.2f;
 		}
 		
 		public override float SpawnChance(NPCSpawnInfo spawnInfo) {
 			if(Main.hardMode);
 			{
 				return spawnInfo.spawnTileType == TileID.Mud ||spawnInfo.spawnTileType == TileID.Dirt ? .5f : 0f;
+			}
+		}
+		public override void NPCLoot() {
+			Item.NewItem(npc.getRect(), ItemID.Gel);
+			if (Main.rand.NextFloat() < .8f) {
+				Item.NewItem(npc.getRect(), ItemID.Gel);
+			}
+			if (Main.rand.NextFloat() < .6f) {
+				Item.NewItem(npc.getRect(), ItemID.Gel);
+			}
+			if (Main.rand.NextFloat() < .4f) {
+				Item.NewItem(npc.getRect(), ItemID.Gel);
+			}
+			if (Main.rand.NextFloat() < .2f) {
+				Item.NewItem(npc.getRect(), ItemID.Gel);
 			}
 		}
 	}
