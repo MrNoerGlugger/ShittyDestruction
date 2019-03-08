@@ -25,26 +25,5 @@ namespace ShittyDestruction.Items
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.DirtBlock, 10000);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.PlatinumOre);
-			recipe.AddTile(TileID.Hellforge);
-			recipe.SetResult(ItemID.PlatinumCoin, 5);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.GoldOre);
-			recipe.AddTile(TileID.Hellforge);
-			recipe.SetResult(ItemID.GoldCoin, 500);
-			recipe.AddRecipe();
-		}
 	}
 }
