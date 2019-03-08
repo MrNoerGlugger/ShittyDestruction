@@ -50,6 +50,10 @@ namespace ShittyDestruction.NPCs
 			if (Main.rand.NextFloat() < .2f) {
 				Item.NewItem(npc.getRect(), ItemID.Gel);
 			}
+			Item.NewItem(npc.getRect(), mod.ItemType("Poop"));
+			if (Main.expertMode) {
+				Item.NewItem(npc.getRect(), mod.ItemType("Poop"));
+			}
 		}
 	}
 }
